@@ -15,14 +15,16 @@ const styles = StyleSheet.create({
 
 const SplashScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <Image
-        style={styles.tinyLogo}
-        source={{
-          uri: 'https://reactnative.dev/img/tiny_logo.png',
-        }}
-      />
-    </SafeAreaView>
+    <View style={{backgroundColor: 'fff'}}>
+      <SafeAreaView style={styles.container}>
+        <Image
+          style={styles.tinyLogo}
+          source={{
+            uri: 'https://reactnative.dev/img/tiny_logo.png',
+          }}
+        />
+      </SafeAreaView>
+    </View>
   );
 };
 

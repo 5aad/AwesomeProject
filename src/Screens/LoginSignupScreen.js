@@ -4,7 +4,6 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableHighlight,
   TextInput,
   TouchableWithoutFeedback,
   KeyboardAvoidingView,
@@ -54,7 +53,7 @@ const LoginSignupScreen = ({navigation}) => {
       behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
       style={styles.keybd}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <ScrollView>
+        <ScrollView style={{backgroundColor: '#fff'}}>
           <SafeAreaView style={styles.container}>
             <Text style={styles.loginText}>Login</Text>
 
@@ -65,6 +64,7 @@ const LoginSignupScreen = ({navigation}) => {
             <TextInput style={styles.inputText} />
             <Button
               text="Login"
+              bgColor="#000"
               onPress={() => navigation.navigate('MyWallet')}
             />
             <Text style={styles.orText}>OR</Text>
@@ -80,7 +80,7 @@ const LoginSignupScreen = ({navigation}) => {
             <Text style={styles.labelText}>Password</Text>
             <TextInput style={styles.inputText} />
 
-            <Button text="Signup" />
+            <Button text="Signup" bgColor="#000" />
           </SafeAreaView>
         </ScrollView>
       </TouchableWithoutFeedback>

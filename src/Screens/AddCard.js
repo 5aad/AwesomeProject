@@ -4,7 +4,6 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableHighlight,
   TextInput,
   TouchableWithoutFeedback,
   KeyboardAvoidingView,
@@ -48,7 +47,7 @@ const AddCard = () => {
       behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
       style={styles.keybd}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <ScrollView>
+        <ScrollView style={{backgroundColor: '#fff'}}>
           <SafeAreaView style={styles.container}>
             <Text style={styles.labelText}>Cardolder Name</Text>
             <TextInput style={styles.inputText} />
@@ -71,7 +70,7 @@ const AddCard = () => {
             <Text style={styles.labelText}>Zip Code</Text>
             <TextInput style={styles.inputText} />
 
-            <Button text="Save" />
+            <Button text="Save" bgColor="#000" />
           </SafeAreaView>
         </ScrollView>
       </TouchableWithoutFeedback>

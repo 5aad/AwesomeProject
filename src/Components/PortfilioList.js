@@ -4,10 +4,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  item: {
+  key: {
     padding: 10,
-    fontSize: 18,
     height: 44,
+  },
+  value: {
+    padding: 10,
+    height: 44,
+    color: '#FF0000',
   },
   itemContainer: {
     flex: 1,
@@ -16,15 +20,23 @@ const styles = StyleSheet.create({
   },
 });
 
-const PortfilioList = ({dataList}) => {
+const PortfilioList = ({dataList, keyColor, sizeFont}) => {
   return (
     <View style={styles.container}>
       <FlatList
         data={dataList}
         renderItem={({item}) => (
           <View style={styles.itemContainer}>
-            <Text style={styles.item}>{item.key}</Text>
-            <Text style={styles.item}>{item.value}</Text>
+            <Text
+              style={[
+                styles.key,
+                {fontSize: parseInt(sizeFont), color: `${keyColor}`},
+              ]}>
+              {item.key}
+            </Text>
+            <Text style={[styles.value, {fontSize: parseInt(sizeFont)}]}>
+              {item.value}
+            </Text>
           </View>
         )}
       />
