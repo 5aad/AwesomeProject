@@ -3,9 +3,7 @@ import {
   SafeAreaView,
   View,
   Text,
-  Image,
   StyleSheet,
-  Button,
   TouchableHighlight,
   TextInput,
   TouchableWithoutFeedback,
@@ -14,6 +12,8 @@ import {
   Platform,
   ScrollView,
 } from 'react-native';
+
+import Button from '../Components/Button';
 
 const styles = StyleSheet.create({
   keybd: {
@@ -24,25 +24,6 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     marginHorizontal: 18,
   },
-  loginText: {
-    color: '#000',
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-  loginButton: {
-    marginTop: 32,
-    marginBottom: 14,
-    borderRadius: 6,
-    paddingVertical: 12,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    elevation: 5,
-  },
-  loginButtonText: {
-    color: '#fff',
-    fontSize: 18,
-  },
-
   labelText: {
     marginTop: 14,
     fontSize: 18,
@@ -52,12 +33,6 @@ const styles = StyleSheet.create({
   inputText: {
     borderColor: '#C4C4C4',
     borderBottomWidth: 1,
-  },
-  orText: {
-    color: '#000',
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
   },
   cardDetailContainer: {
     flex: 1,
@@ -96,11 +71,7 @@ const AddCard = () => {
             <Text style={styles.labelText}>Zip Code</Text>
             <TextInput style={styles.inputText} />
 
-            <TouchableHighlight>
-              <View style={styles.loginButton}>
-                <Text style={styles.loginButtonText}>Save</Text>
-              </View>
-            </TouchableHighlight>
+            <Button text="Save" />
           </SafeAreaView>
         </ScrollView>
       </TouchableWithoutFeedback>
