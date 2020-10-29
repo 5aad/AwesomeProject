@@ -24,12 +24,14 @@ const styles = StyleSheet.create({
     marginHorizontal: 18,
   },
   loginText: {
+    fontFamily: 'Manrope-Bold',
     color: '#000',
     fontSize: 24,
     fontWeight: 'bold',
   },
 
   labelText: {
+    fontFamily: 'Manrope-Bold',
     marginTop: 14,
     fontSize: 18,
     color: '#C4CACC',
@@ -40,6 +42,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   orText: {
+    fontFamily: 'Manrope-Bold',
     color: '#000',
     fontSize: 24,
     fontWeight: 'bold',

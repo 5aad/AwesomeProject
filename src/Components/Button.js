@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   loginButtonText: {
+    fontFamily: 'Manrope-Bold',
     color: '#fff',
     fontSize: 18,
   },

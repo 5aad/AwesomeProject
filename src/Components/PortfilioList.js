@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
   key: {
     padding: 10,
     height: 44,
+    fontFamily: 'Manrope-Medium',
   },
   value: {
     padding: 10,

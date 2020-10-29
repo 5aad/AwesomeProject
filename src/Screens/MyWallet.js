@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 18,
   },
   myWalletText: {
+    fontFamily: 'Manrope-Bold',
     color: '#000',
     fontSize: 24,
     fontWeight: '500',
@@ -30,11 +31,13 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   balanceText: {
+    fontFamily: 'Manrope-Bold',
     fontSize: 16,
     fontWeight: '400',
     marginRight: 10,
   },
   balance: {
+    fontFamily: 'Manrope-Bold',
     fontWeight: '800',
     fontSize: 28,
   },

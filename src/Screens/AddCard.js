@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 18,
   },
   labelText: {
+    fontFamily: 'Manrope-Bold',
     marginTop: 14,
     fontSize: 18,
     color: '#C4CACC',

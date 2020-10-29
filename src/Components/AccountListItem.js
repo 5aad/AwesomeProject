@@ -10,14 +10,17 @@ import {
 
 const styles = StyleSheet.create({
   labelText: {
+    fontFamily: 'Manrope-Bold',
     marginBottom: 8,
     fontSize: 18,
     color: '#C4CACC',
   },
   text: {
+    fontFamily: 'Manrope-Bold',
     fontSize: 16,
   },
   verif: {
+    fontFamily: 'Manrope-Bold',
     fontSize: 16,
     color: '#C4CACC',
   },

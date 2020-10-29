@@ -1,11 +1,13 @@
 import React from 'react';
 import {SafeAreaView, View, Text, Image, StyleSheet} from 'react-native';
+import images from '../api/images';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#fff',
   },
   tinyLogo: {
     width: 50,
@@ -15,16 +17,9 @@ const styles = StyleSheet.create({
 
 const SplashScreen = () => {
   return (
-    <View style={{backgroundColor: 'fff'}}>
-      <SafeAreaView style={styles.container}>
-        <Image
-          style={styles.tinyLogo}
-          source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
-          }}
-        />
-      </SafeAreaView>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Image style={styles.tinyLogo} source={images.logo} />
+    </SafeAreaView>
   );
 };
 

@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
   ScrollView,
 } from 'react-native';
+import images from '../api/images';
 import AccountListItem from '../Components/AccountListItem';
 
 const styles = StyleSheet.create({
@@ -33,12 +34,14 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   addPayment: {
+    fontFamily: 'Manrope-Bold',
     fontSize: 14,
     color: '#979797',
     marginLeft: 18,
     marginTop: 10,
   },
   paymenMethod: {
+    fontFamily: 'Manrope-Bold',
     fontSize: 18,
     color: '#979797',
     marginLeft: 18,
@@ -50,7 +53,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 });
-const Account = () => {
+const Account = ({navigation}) => {
   return (
     <ScrollView style={{backgroundColor: '#fff'}}>
       <SafeAreaView style={styles.container}>
@@ -64,24 +67,17 @@ const Account = () => {
           <View style={styles.listContainer}>
             <View style={styles.listContent}>
               <View style={styles.cardNum}>
-                <Image
-                  style={styles.tinyLogo}
-                  source={{
-                    uri: 'https://reactnative.dev/img/tiny_logo.png',
-                  }}
-                />
+                <Image style={styles.tinyLogo} source={images.visa} />
                 <Text>123******</Text>
               </View>
-              <Image
-                style={styles.tinyLogo}
-                source={{
-                  uri: 'https://reactnative.dev/img/tiny_logo.png',
-                }}
-              />
+              <Image style={styles.tinyLogo} source={images.rightArrow} />
             </View>
           </View>
         </TouchableWithoutFeedback>
-        <Text style={styles.addPayment}>Add Payment Method</Text>
+        <TouchableWithoutFeedback
+          onPress={() => navigation.navigate('AddCard')}>
+          <Text style={styles.addPayment}>Add Payment Method</Text>
+        </TouchableWithoutFeedback>
       </SafeAreaView>
     </ScrollView>
   );
