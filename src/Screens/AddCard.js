@@ -26,13 +26,16 @@ const styles = StyleSheet.create({
   labelText: {
     fontFamily: 'Manrope-Bold',
     marginTop: 14,
-    fontSize: 18,
+    fontSize: 15,
     color: '#C4CACC',
   },
 
   inputText: {
+    fontFamily: 'Manrope-Medium',
+
     borderColor: '#C4C4C4',
     borderBottomWidth: 1,
+    fontSize: 22,
   },
   cardDetailContainer: {
     flex: 1,
@@ -69,7 +72,7 @@ const AddCard = () => {
             </View>
 
             <Text style={styles.labelText}>Zip Code</Text>
-            <TextInput style={styles.inputText} />
+            <TextInput style={[styles.inputText, {marginBottom: 50}]} />
 
             <Button text="Save" bgColor="#000" />
           </SafeAreaView>

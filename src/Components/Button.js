@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Button = ({text,bgColor, ...props}) => {
+const Button = ({text, bgColor, ...props}) => {
   return (
     <View>
       <TouchableHighlight onPress={props.onPress}>

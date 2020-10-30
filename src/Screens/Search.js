@@ -49,7 +49,7 @@ const Search = () => {
         <ScrollView style={{backgroundColor: '#fff'}}>
           <SafeAreaView style={styles.container}>
             <TextInput style={styles.inputText} placeholder="Search" />
-            <PortfilioList dataList={data} sizeFont={18} keyColor={'#000'} />
+            <PortfilioList dataList={data} sizeFont={24} keyColor={'#000'} />
           </SafeAreaView>
         </ScrollView>
       </TouchableWithoutFeedback>

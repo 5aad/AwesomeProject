@@ -11,7 +11,7 @@ import {
   Platform,
   ScrollView,
 } from 'react-native';
-
+import BoxShadow from '../Components/BoxShadow';
 import Button from '../Components/Button';
 
 const styles = StyleSheet.create({
@@ -65,11 +65,14 @@ const LoginSignupScreen = ({navigation}) => {
 
             <Text style={styles.labelText}>Password</Text>
             <TextInput style={styles.inputText} />
-            <Button
-              text="Login"
-              bgColor="#000"
-              onPress={() => navigation.navigate('MyWallet')}
-            />
+
+            <BoxShadow>
+              <Button
+                text="Login"
+                bgColor="#000"
+                onPress={() => navigation.navigate('TabNav')}
+              />
+            </BoxShadow>
             <Text style={styles.orText}>OR</Text>
 
             <Text style={styles.loginText}>Sign-Up</Text>
@@ -83,7 +86,9 @@ const LoginSignupScreen = ({navigation}) => {
             <Text style={styles.labelText}>Password</Text>
             <TextInput style={styles.inputText} />
 
-            <Button text="Signup" bgColor="#000" />
+            <BoxShadow>
+              <Button text="Signup" bgColor="#000" />
+            </BoxShadow>
           </SafeAreaView>
         </ScrollView>
       </TouchableWithoutFeedback>

@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
   },
   key: {
     padding: 10,
-    height: 44,
     fontFamily: 'Manrope-Medium',
   },
   value: {
@@ -18,6 +17,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginTop: 20,
   },
 });
 
@@ -35,9 +35,7 @@ const PortfilioList = ({dataList, keyColor, sizeFont}) => {
               ]}>
               {item.key}
             </Text>
-            <Text style={[styles.value, {fontSize: parseInt(sizeFont)}]}>
-              {item.value}
-            </Text>
+            <Text style={[styles.value, {fontSize: 20}]}>{item.value}</Text>
           </View>
         )}
       />

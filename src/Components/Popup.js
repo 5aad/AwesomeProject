@@ -116,7 +116,7 @@ const Popup = () => {
             text="Sell"
             bgColor="#FF0000"
             onPress={() => {
-                setModalVisibleSell(true);
+              setModalVisibleSell(true);
             }}
           />
         </View>
@@ -135,8 +135,8 @@ const Popup = () => {
 
 const styles = StyleSheet.create({
   centeredView: {
-    flex: 1,
-    justifyContent: 'center',
+    flex:1,
+    justifyContent: 'flex-end',
     alignItems: 'center',
     marginTop: 22,
   },
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: 'center',
-    fontSize:24,
+    fontSize: 24,
   },
   buttonContainer: {
     flex: 1,
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 50,
     borderColor: '#000',
-    marginVertical:26
+    marginVertical: 26,
   },
   inc: {
     fontSize: 38,

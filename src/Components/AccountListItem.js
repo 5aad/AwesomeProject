@@ -4,7 +4,7 @@ import {
   View,
   Text,
   StyleSheet,
-  Image,
+  TextInput,
   TouchableWithoutFeedback,
 } from 'react-native';
 
@@ -12,24 +12,32 @@ const styles = StyleSheet.create({
   labelText: {
     fontFamily: 'Manrope-Bold',
     marginBottom: 8,
-    fontSize: 18,
+    fontSize: 15,
     color: '#C4CACC',
+    paddingHorizontal: 18,
   },
   text: {
-    fontFamily: 'Manrope-Bold',
-    fontSize: 16,
+    fontFamily: 'Manrope-Medium',
+    fontSize: 18,
   },
   verif: {
     fontFamily: 'Manrope-Bold',
     fontSize: 16,
     color: '#C4CACC',
+    paddingRight: 18,
+    borderBottomWidth: 1,
+    borderBottomColor: '#C4C4C4',
+  },
+  txtInput: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#C4C4C4',
+    fontSize: 16,
+    paddingHorizontal: 18,
+    flex: 1,
   },
   listContainer: {
     marginTop: 10,
-    paddingBottom: 25,
-    borderBottomWidth: 1,
     borderColor: '#C4C4C4',
-    paddingHorizontal: 18,
   },
 
   listContent: {
@@ -46,9 +54,9 @@ const AccountListItem = ({labelName, text, check, ...props}) => {
         <View style={styles.listContainer}>
           <Text style={styles.labelText}>{labelName}</Text>
           <View style={styles.listContent}>
-            <Text style={styles.text}>{text}</Text>
+            <TextInput style={styles.txtInput} value={text} />
             {check === 'true' ? (
-              <Text style={styles.verif}>Unvarified</Text>
+              <Text style={styles.verif}>Unverified</Text>
             ) : null}
           </View>
         </View>

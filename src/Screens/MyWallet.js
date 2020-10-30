@@ -15,9 +15,10 @@ const styles = StyleSheet.create({
     flex: 1,
     marginVertical: 20,
     marginHorizontal: 18,
+    marginBottom: 100,
   },
   myWalletText: {
-    fontFamily: 'Manrope-Bold',
+    fontFamily: 'Manrope-SemiBold',
     color: '#000',
     fontSize: 24,
     fontWeight: '500',
@@ -60,7 +61,6 @@ const MyWallet = () => {
           </View>
         </View>
 
-        {/* Graph */}
         <Graph />
 
         <Text style={{marginBottom: 12, marginTop: 0}}>Portfilio</Text>
