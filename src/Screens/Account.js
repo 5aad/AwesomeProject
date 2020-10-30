@@ -10,11 +10,11 @@ import {
 } from 'react-native';
 import images from '../api/images';
 import AccountListItem from '../Components/AccountListItem';
+import HeaderApp from '../Components/HeaderApp';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginVertical: 10,
   },
   listContainer: {
     paddingVertical: 12,
@@ -57,6 +57,7 @@ const Account = ({navigation}) => {
   return (
     <ScrollView style={{backgroundColor: '#fff'}}>
       <SafeAreaView style={styles.container}>
+        <HeaderApp headerName="Account" check="true"/>
         <AccountListItem text="abc" labelName="First Name" />
         <AccountListItem text="abc" labelName="Last Name" />
         <AccountListItem text="abx@gmail.com" labelName="Email" check="true" />

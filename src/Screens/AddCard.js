@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 
 import Button from '../Components/Button';
+import HeaderApp from '../Components/HeaderApp';
 
 const styles = StyleSheet.create({
   keybd: {
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    marginVertical: 20,
+
     marginHorizontal: 18,
   },
   labelText: {
@@ -52,6 +53,7 @@ const AddCard = () => {
       style={styles.keybd}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ScrollView style={{backgroundColor: '#fff'}}>
+          <HeaderApp headerName="Add Card" headerWidth={210} />
           <SafeAreaView style={styles.container}>
             <Text style={styles.labelText}>Cardolder Name</Text>
             <TextInput style={styles.inputText} />

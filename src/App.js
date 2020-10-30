@@ -4,12 +4,14 @@ import {createStackNavigator} from '@react-navigation/stack';
 import LoginSignupScreen from './Screens/LoginSignupScreen';
 import AddCard from './Screens/AddCard';
 import Stock from './Screens/Stock';
-
+import Icon from 'react-native-vector-icons/Feather';
 import SplashScreen from './Screens/SplashScreen';
 import TabNav from './TabNav';
+import {useNavigation} from '@react-navigation/native';
 const Stack = createStackNavigator();
 
 const App = () => {
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="LoginSignupScreen">
@@ -32,10 +34,7 @@ const App = () => {
         <Stack.Screen
           name="AddCard"
           component={AddCard}
-          options={{
-            title: 'Add Card',
-            headerTitleStyle: {alignSelf: 'center', marginLeft: -35},
-          }}
+          options={{headerShown: false}}
         />
         <Stack.Screen name="Screen" component={SplashScreen} />
       </Stack.Navigator>
